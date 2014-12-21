@@ -37,6 +37,12 @@ function showPhoto(){
 }
 $(function() {
 	showPhoto();
+	$('#creater').combobox({
+		value : '${society.creater }',
+		onSelect:function(record){
+			$('#creater').val(record.text);
+	    }
+	});
 });
 
 function submit(){ 
@@ -48,13 +54,6 @@ function submit(){
 		$('#form1').submit();
 	}
 	}
-	
-$('#creater').combobox({
-	value : '${society.creater }',
-	onSelect:function(record){
-		$('#creater').val(record.text);
-    }
-});
 </script>
 </head>
 <body>
@@ -300,7 +299,7 @@ $('#creater').combobox({
     <td height="26" colspan="7" nowrap="nowrap">&nbsp;&nbsp;审批人：
     <select id="creater" class="easyui-combobox" 
 								name="creater" url="<%=request.getContextPath()%>/app/system/dict/listDictByType.action?type=sldb.audit" valueField="id"
-								textField="text" editable="false" panelHeight="90"></select></td>
+								textField="text" editable="false" >${society. creater}</select></td>
   </tr>
   <tr>
     <td height="26" colspan="10" nowrap="nowrap" bgcolor="#CCCCCC">附件信息：</td>
@@ -316,7 +315,7 @@ $('#creater').combobox({
  <script type="text/javascript">
 	$(document).ready(function() {
 		$.formValidator.initConfig({
-			formid : "editForm"
+			formid : "form1"
 		});
 
 		//金额
