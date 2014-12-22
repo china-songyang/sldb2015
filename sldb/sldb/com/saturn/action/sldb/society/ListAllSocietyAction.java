@@ -24,7 +24,7 @@ public class ListAllSocietyAction implements IAction {
 		User user = (User) request.getSession().getAttribute("authUser");
 		User userOragantion = User.getOrganizationsByOrganizationId(user.getId());
 		
-		if ("21".equals(userOragantion.getOrganizationId())) {
+		/*if ("21".equals(userOragantion.getOrganizationId())) {
 
 			ListData<Society> data = Society.getAll(vo,
 					dataGridInfo.getStartPage(), dataGridInfo.getRows(),
@@ -32,7 +32,7 @@ public class ListAllSocietyAction implements IAction {
 
 			return new JsonView(JSONUtils.getDataGridJSON(data.getTotal(),
 					data.getList()));
-		} else {
+		} else {*/
 			vo.setCreater(user.getId());
 			ListData<Society> data = Society.getAll(vo,
 					dataGridInfo.getStartPage(), dataGridInfo.getRows(),
@@ -41,7 +41,7 @@ public class ListAllSocietyAction implements IAction {
 			return new JsonView(JSONUtils.getDataGridJSON(data.getTotal(),
 					data.getList()));
 		}
-	}
+/*	}*/
 
 	@Override
 	public String requestMapping() {

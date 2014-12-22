@@ -411,5 +411,20 @@ alert("户口不能为空");
 </center>
 <input type="hidden" id="photo" name="photo" value=""/>
 </form>
+<!--  <script type="text/javascript">
+	$(document).ready(function() {
+		$.formValidator.initConfig({
+			formid : "addForm"
+		});
+
+		//金额
+		$("#money").formValidator({
+			onfocus : "请输入金额"
+		}).regexValidator({
+			regexp : "number",
+			onerror : "请输入数字"
+		});
+		});
+</script> -->
 </body>
 </html>
