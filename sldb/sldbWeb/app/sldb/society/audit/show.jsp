@@ -15,7 +15,7 @@
 				striped : true, //数据条纹显示
 				collapsible : true,
 				singleSelect : false,//只能选一行
-				url : '<%=request.getContextPath()%>/app/sldb/society/listAllSociety.action',
+				url : '<%=request.getContextPath()%>/app/sldb/society/listSocietyByAudit.action',
 				queryParams : {
 					state : '待审核'
 				},
