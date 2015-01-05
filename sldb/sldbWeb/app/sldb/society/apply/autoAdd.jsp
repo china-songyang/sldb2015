@@ -405,7 +405,7 @@ alert("户口不能为空");
     <td height="26" colspan="3" nowrap="nowrap" style="border-top: none;"><div align="center">年&nbsp;&nbsp;&nbsp;&nbsp; 月&nbsp;&nbsp; &nbsp;&nbsp;日</div></td>
   </tr>
   <tr>
-    <td height="26" colspan="8" nowrap="nowrap">&nbsp;&nbsp;救助金额：<input id="money" type="text" name="money" /></td>
+    <td height="26" colspan="8" nowrap="nowrap">&nbsp;&nbsp;救助金额：<input id="money" type="text" name="money" value="" readonly="readonly"/></td>
   </tr>
 </table>
 </center>

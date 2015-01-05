@@ -94,9 +94,7 @@
 					align : 'center',
 					rowspan : 2,	
 					formatter : function(value, rec) {
-						return '<span><a href="#" onclick="editVO(\'' + rec.id + '\');"><img src="<%=request.getContextPath()%>/app/themes/icons/edit.png" width="14" height="14" border="0" /></a>' +
-						'&nbsp&nbsp<a href="#" onclick="deleteVO(\'' + rec.id + '\');"><img src="<%=request.getContextPath()%>/app/themes/icons/cancel.png" width="14" height="14" border="0" /></a>' +
-						'&nbsp&nbsp<a href="#" onclick="viewVO(\'' + rec.id + '\');">预览</a>' +
+						return '<span><a href="#" onclick="viewVO(\'' + rec.id + '\');">预览</a>' +
 						'</span>';
 					}
 				} ] ],

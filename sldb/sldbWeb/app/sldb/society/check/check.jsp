@@ -104,7 +104,7 @@
 					text : '<%=sub.getName()%>',
 					iconCls : 'icon-add',
 					handler : function() {
-						queryVO('<%=request.getContextPath()%>/app/sldb/check/listSub.action?pid=<%=sub.getId()%>');
+						queryVO('<%=request.getContextPath()%>/app/sldb/society/listSocietySub.action?pid=<%=sub.getId()%>');
 						return false;//解决IE6的不跳转的bug
 					}
 				}

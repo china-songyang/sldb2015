@@ -63,6 +63,16 @@ public class Sub {
 				null, mapping, Sub.class);
 	}
 	
+	public static Sub getPid(String id) {
+		// 指定值对象类型(VOClass)。例子VOClass=User
+		// 指定表主键(key)。例子:key=id
+		// 指定插入表名称(tableName)。例子：如user表，tableName=user
+		// 指定O-R映射规则对象。默认mapping
+		return SimpleDaoTemplate.queryOne(
+				"SELECT * FROM sldb_sub WHERE 1 = 1 and id = '" + id + "'",
+				null, mapping, Sub.class);
+	}
+	
 	public static int removeByPid(String pid, Connection connection) {
 		// 指定插入表名称(tableName)。例子：如user表，tableName=user
 		if(connection!=null){
