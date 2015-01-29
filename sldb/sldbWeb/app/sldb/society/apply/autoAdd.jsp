@@ -35,6 +35,8 @@ input {
 </style>
 <script> 
 function submit(){ 
+var causeStr = addForm.cause.value;
+var causeLen = causeStr.length;
 if(addForm.name.value==""){ 
 alert("申请人姓名不能为空"); 
 }else if(addForm.identify.value==""){ 
@@ -61,7 +63,11 @@ alert("家庭总支出不能为空");
 alert("支出用途不能为空"); 
 }else if($('#accountType').combogrid('getValue')==""){
 alert("户口不能为空"); 
-} else{
+} else if(addForm.cause.value ==""){
+alert("申报理由不能为空"); 
+}else if(causeLen <30){
+alert("申报理由不能少于30个字符"); 
+}else{
 	$('#addForm').submit();
 }
 } 
@@ -219,7 +225,7 @@ alert("户口不能为空");
     <td width="85" height="33" align="center" nowrap="nowrap" ><span style="color: red">*</span>姓名</td>
     <td width="111" height="33" nowrap="nowrap"><input id="name" type="text" name="name" readonly="readonly"/></td>
     <td width="123" height="33" align="center" nowrap="nowrap" ><span style="color: red">*</span>性别</td>
-    <td width="101" height="33" nowrap="nowrap"><input id="sex" type="text" name="sex" readonly="readonly"/></td>
+    <td width="101" height="33" nowrap="nowrap"><input id="sex" type="text" name="sex"readonly="readonly" /></td>
     <td width="116" height="33" align="center" nowrap="nowrap" ><span style="color: red">*</span>身份证号</td>
     <td height="33" colspan="2" nowrap="nowrap"><input id="identify" type="text" name="identify"  readonly="readonly"/></td>
     <td width="102" rowspan="3" align="center" nowrap="nowrap"><img src="" style="width: 80px; height: 90px" id="picture" name="picture" /></td>
