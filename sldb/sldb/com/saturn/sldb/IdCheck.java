@@ -158,6 +158,8 @@ public class IdCheck {
 
 				String identify1 = firstValue.get("identify") + "";
 				String identify2 = secondValue.get(key) + "";
+				/*String identify1 = "220324192908133717" + "";
+				String identify2 = secondValue.get(key) + "";*/
 				
 				int index = identify1.compareTo(identify2);
 				
@@ -166,7 +168,7 @@ public class IdCheck {
 						result.add(secondValue);
 						source.add(firstValue);
 					}
-					first++;
+					//first++;
 					second++;
 				} else if (index > 0) {
 					second++;
@@ -258,7 +260,7 @@ public class IdCheck {
 						result.add(secondValue);
 						source.add(firstValue);
 					}
-					first++;
+					//first++;
 					second++;
 				} else if (index > 0) {
 					second++;

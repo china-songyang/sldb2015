@@ -12,7 +12,7 @@
 
 	<% 
 		String pid = request.getParameter("pid");
-		System.out.println("pid");
+		System.out.println(pid);
 		Society society = Society.get(pid);
 		List subs = Sub.getByPid(pid);
 	%>
